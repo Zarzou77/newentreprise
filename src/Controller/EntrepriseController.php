@@ -21,7 +21,7 @@ class EntrepriseController extends AbstractController
             'employes' => $employe,
         ]);
     }
-    #[Route('/entreprise/home', name: 'home')]
+    #[Route('/', name: 'home')]
     public function home(): Response
     {
         return $this->render('entreprise/home.html.twig',[
