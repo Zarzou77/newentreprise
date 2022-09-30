@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<table class="col-md-4 mx-auto text-center border border-dark mb-3 p-3 mt-3 mr-1">
+
+{% for employe_new in employe %}
+
+	<thead>
+		<tr>
+            <th scope="col">Prénom</th>
+                     
+              
+        </tr>
+	</thead>
+	<tbody>
+        <tr>
+            <td scope="row">{{ employe.prenom }}</td>
+            <td scope="row">{{ employe.nom }}</td>
+            <td scope="row">{{ employe.telephone }}</td>
+            <td scope="row">{{ employe.email }}</td>
+            <td scope="row">{{ employe.adresse }}</td>
+            <td scope="row">{{ employe.poste }}</td>
+            <td scope="row">{{ employe.salaire }}</td>
+            <td scope="row">{{ employe.dateDeNaissance }}</td>
+            
+        </tr>
+        <tr></tr>
+    </tbody>
+       
+ {% endfor %}
+
+</table>
+{% endblock %}

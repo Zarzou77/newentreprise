@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<body style="background-color:#BCAAA4">
+<h1>
+    {% if editMode %}
+        Modification de l'employé
+    {% else %}
+        Création d'un employé
+  
+    {% endif %}
+</h1>
+
+{{ form_start(formEmploye,{
+    attr:{
+        novalidate:'novalidate',
+    }
+
+})}}
+
+{{ form_row(formEmploye.prenom)}}
+{{ form_row(formEmploye.nom)}}
+{{ form_row(formEmploye.telephone)}}
+{{ form_row(formEmploye.email)}}
+{{ form_row(formEmploye.adresse)}}
+{{ form_row(formEmploye.salaire)}}
+{{ form_row(formEmploye.poste)}}
+{{ form_row(formEmploye.dateDeNaissance)}}
+
+<button type="submit" class="btn btn-warning mt-2">
+{% if editMode %}
+    Enregistrer les modifications
+{% else %}
+    Ajouter un employé
+{% endif %}
+
+</button>   
+
+{{ form_end(formEmploye)}}
+</body>
+{% endblock %}
